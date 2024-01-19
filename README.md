@@ -5,9 +5,12 @@ In this project, we aim to have a machine learning model learn whether a person 
 
 Link to Witeboard: [https://miro.com/app/board/uXjVN6vN5TE=/?share_link_id=444418741911](https://witeboard.com/8db74d30-b0ba-11ee-a930-f11b6ad6ecdd)https://witeboard.com/8db74d30-b0ba-11ee-a930-f11b6ad6ecdd
 
-## Data-Sources for credit risk:
-https://www.kaggle.com/datasets/praveengovi/credit-risk-classification-dataset
+## Data-Sources for credit risk
 https://www.kaggle.com/datasets/laotse/credit-risk-dataset
+Where we start of with: 
+
+### Other potential sources
+https://www.kaggle.com/datasets/praveengovi/credit-risk-classification-dataset
 https://www.kaggle.com/datasets/uciml/german-credit
 
 page for more datasets: https://www.listendata.com/2019/08/datasets-for-credit-risk-modeling.html
