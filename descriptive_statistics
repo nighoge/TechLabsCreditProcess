@@ -1,0 +1,35 @@
+import pandas as pd
+import io
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load the data
+data = pd.read_csv('/content/sample_data/credit_risk_dataset.csv')
+
+# Display basic statistics of the dataset
+print(data.describe())
+
+# Countplot of loan grades
+plt.figure(figsize=(10, 6))
+sns.countplot(x='loan_grade', data=data, order=sorted(data['loan_grade'].unique()))
+plt.title('Loan Grades Count')
+plt.show()
+
+# Boxplot of loan amounts
+plt.figure(figsize=(10, 6))
+sns.boxplot(x='loan_amnt', data=data)
+plt.title('Distribution of Loan Amounts')
+plt.show()
+
+# Scatter plot of income vs. loan amount
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x='person_income', y='loan_amnt', data=data, hue='loan_status')
+plt.title('Income vs. Loan Amount')
+plt.show()
+
+# Correlation matrix heatmap
+correlation_matrix = data.corr()
+plt.figure(figsize=(12, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
+plt.title('Correlation Matrix Heatmap')
+plt.show()
