@@ -33,3 +33,35 @@ plt.figure(figsize=(12, 8))
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
 plt.title('Correlation Matrix Heatmap')
 plt.show()
+
+# Access csv file via github repo
+"""
+import requests
+import pandas as pd
+
+# Replace with your GitHub username, repository name, and file path
+github_username = "your_username"
+repo_name = "your_repository"
+file_path = "path/to/your/file.csv"
+
+# Replace with your personal access token
+github_token = "your_personal_access_token"
+
+# Construct the raw content URL for the CSV file
+raw_url = f"https://raw.githubusercontent.com/{github_username}/{repo_name}/main/{file_path}"
+
+# Set up headers with the personal access token for authentication
+headers = {"Authorization": f"token {github_token}"}
+
+# Make a GET request to the raw URL and read the CSV into a DataFrame
+response = requests.get(raw_url, headers=headers)
+
+# Check if the request was successful (status code 200)
+if response.status_code == 200:
+    # Read the CSV data into a DataFrame
+    df = pd.read_csv(pd.compat.StringIO(response.text))
+    print(df.head())
+else:
+    print(f"Failed to retrieve data. Status code: {response.status_code}")
+    print(response.text)
+"""
