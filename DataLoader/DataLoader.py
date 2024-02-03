@@ -27,7 +27,7 @@ def createTabularPandas():
 
     return TabularPandas(df, procs=procs, cat_names=categorical_cols, cont_names=continuous_cols, y_names=target, splits=splits)
 
-def createTabularPandas(bs=64):
+def createDataLoader(bs=64):
     return createTabularPandas().dataloaders(bs=bs)
 
 
